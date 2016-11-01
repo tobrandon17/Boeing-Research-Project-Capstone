@@ -1,0 +1,458 @@
+
+%-----------------------------------------------------------------------------------------------------------------------------------------------
+
+\documentclass[twoside,letterpaper]{article}
+\usepackage[utf8x]{inputenc} 
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb,amsfonts,textcomp}
+\usepackage{color}
+\usepackage{array}
+\usepackage{supertabular}
+\usepackage{hhline}
+\usepackage{hyperref}
+\hypersetup{pdftex, colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue, pdftitle=SYSTEMS AND SOFTWARE REQUIREMENTS SPECIFICATION (SSRS) TEMPLATE, pdfauthor=Brandon To,Michael Chan,Mike Truong, pdfsubject=, pdfkeywords=}
+\usepackage[pdftex]{graphicx}
+% Outline numbering
+\setcounter{secnumdepth}{5}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand\thesubsection{\arabic{section}.\arabic{subsection}}
+\renewcommand\thesubsubsection{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}}
+\renewcommand\theparagraph{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{paragraph}}
+\renewcommand\thesubparagraph{\arabic{section}.\arabic{subsection}.\arabic{subsubsection}.\arabic{paragraph}.\arabic{subparagraph}}
+\makeatletter
+\newcommand\arraybslash{\let\\\@arraycr}
+\makeatother
+% Page layout (geometry)
+\setlength\voffset{-1in}
+\setlength\hoffset{-1in}
+\setlength\topmargin{0.5in}
+\setlength\oddsidemargin{1in}
+\setlength\evensidemargin{1in}
+\setlength\textheight{8.278in}
+\setlength\textwidth{6.5in}
+\setlength\footskip{0.561in}
+\setlength\headheight{0.5in}
+\setlength\headsep{0.461in}
+% Footnote rule
+\setlength{\skip\footins}{0.0469in}
+\renewcommand\footnoterule{\vspace*{-0.0071in}\setlength\leftskip{0pt}\setlength\rightskip{0pt plus 1fil}\noindent\textcolor{black}{\rule{0.25\columnwidth}{0.0071in}}\vspace*{0.0398in}}
+% Pages styles
+\makeatletter
+\newcommand\ps@Standard{
+\renewcommand\@oddhead{\selectlanguage{english}\rmfamily\color{black} Oregon State University\hfill \hfill }
+\renewcommand\@evenhead{\@oddhead}
+\renewcommand\@oddfoot{\foreignlanguage{english}{\textcolor{black}{SSRS Page }}\foreignlanguage{english}{\textcolor{black}{\thepage{}}}}
+\renewcommand\@evenfoot{\@oddfoot}
+\renewcommand\thepage{\arabic{page}}
+}
+\newcommand\ps@Convertviii{
+\renewcommand\@oddhead{}
+\renewcommand\@evenhead{\@oddhead}
+\renewcommand\@oddfoot{}
+\renewcommand\@evenfoot{\@oddfoot}
+\renewcommand\thepage{\arabic{page}}
+}
+\newcommand\ps@Convertvii{
+\renewcommand\@oddhead{}
+\renewcommand\@evenhead{\@oddhead}
+\renewcommand\@oddfoot{}
+\renewcommand\@evenfoot{\@oddfoot}
+\renewcommand\thepage{\arabic{page}}
+}
+\newcommand\ps@Convertvi{
+\renewcommand\@oddhead{}
+\renewcommand\@evenhead{\@oddhead}
+\renewcommand\@oddfoot{}
+\renewcommand\@evenfoot{\@oddfoot}
+\renewcommand\thepage{\arabic{page}}
+}
+\newcommand\ps@Convertv{
+\renewcommand\@oddhead{}
+\renewcommand\@evenhead{\@oddhead}
+\renewcommand\@oddfoot{}
+\renewcommand\@evenfoot{\@oddfoot}
+\renewcommand\thepage{\arabic{page}}
+}
+\newcommand\ps@Convertiv{
+\renewcommand\@oddhead{}
+\renewcommand\@evenhead{\@oddhead}
+\renewcommand\@oddfoot{}
+\renewcommand\@evenfoot{\@oddfoot}
+\renewcommand\thepage{\arabic{page}}
+}
+\newcommand\ps@Convertii{
+\renewcommand\@oddhead{}
+\renewcommand\@evenhead{\@oddhead}
+\renewcommand\@oddfoot{}
+\renewcommand\@evenfoot{\@oddfoot}
+\renewcommand\thepage{\arabic{page}}
+}
+\newcommand\ps@FirstPage{
+\renewcommand\@oddhead{}
+\renewcommand\@evenhead{\@oddhead}
+\renewcommand\@oddfoot{}
+\renewcommand\@evenfoot{\@oddfoot}
+\renewcommand\thepage{\arabic{page}}
+}
+\makeatother
+\pagestyle{Standard}
+\setlength\tabcolsep{1mm}
+\renewcommand\arraystretch{1.3}
+% footnotes configuration
+\makeatletter
+\renewcommand\thefootnote{\arabic{footnote}}
+\makeatother
+\title{SYSTEMS AND SOFTWARE REQUIREMENTS SPECIFICATION (SSRS) TEMPLATE}
+\author{Clinton Jeffery}
+\date{2010-11-18T11:33:37.30}
+\begin{document}
+\clearpage\setcounter{page}{1}\pagestyle{Standard}
+\thispagestyle{FirstPage}
+
+
+
+
+
+
+
+\bigskip
+
+
+\clearpage{\centering\selectlanguage{english}\bfseries\color{black}
+SYSTEMS AND SOFTWARE \ REQUIREMENTS SPECIFICATION (SSRS) FOR
+\par}
+
+
+
+
+\bigskip
+
+
+{\centering\selectlanguage{english}\bfseries\color{black}
+Boeing Optimization Research
+\par}
+
+
+
+
+\bigskip
+
+
+
+
+\bigskip
+
+
+
+
+\bigskip
+
+
+{\centering\selectlanguage{english}\bfseries\color{black}
+\includegraphics[width=3.4362in,height=0.6134in]{Boeing-Logo.png} %Boeing Logo is here
+\par}
+
+
+\begin{figure}
+\centering
+%\includegraphics[width=3.4362in,height=0.6134in]{Boeing-Logo.png}
+\end{figure}
+
+
+\bigskip
+
+
+
+
+\bigskip
+
+
+{\centering\selectlanguage{english}\bfseries\color{black}
+Version 1
+\par}
+
+
+{\centering\selectlanguage{english}\bfseries\color{black}
+October 25, 2016
+\par}
+
+
+
+
+\bigskip
+
+
+
+
+\bigskip
+
+
+{\centering\selectlanguage{english}\bfseries\color{black}
+Prepared for:
+\par}
+
+
+{\centering\selectlanguage{english}\bfseries\color{black}
+Boeing Everett Factory\\
+8415 Paine Field, Everett, WA 98203\\
+(206)-755-9602\\
+Marissa.N.Dennis@boeing.com
+\par}
+
+
+
+
+\bigskip
+
+
+
+
+\bigskip
+
+
+{\centering\selectlanguage{english}\bfseries\color{black}
+Prepared by:
+\par}
+
+
+{\centering\selectlanguage{english}\bfseries\color{black}
+Brandon To\\
+Michael Chan\\
+Mike Truong\\
+\par}
+
+
+{\centering\selectlanguage{english}\bfseries\color{black}
+Oregon State University
+\par}
+
+
+{\centering\selectlanguage{english}\bfseries\color{black}
+Corvallis, OR 97331
+\par}
+
+%BEGINNING OF RECORD OF CHANGES PAGE
+
+%END OF RECORD OF CHANGES PAGE
+
+\clearpage{\centering\selectlanguage{english}\bfseries\color{black}
+\foreignlanguage{english}{\MakeUppercase{\ }}\foreignlanguage{english}{\MakeUppercase{Boeing Optimization SSRS}}
+\par}
+
+
+
+{\centering\selectlanguage{english}\bfseries\color{black}
+TABLE OF CONTENTS
+\par}
+
+
+
+
+\bigskip
+
+
+{\selectlanguage{english}\bfseries\color{black}
+Section\ \ Page}
+
+
+\setcounter{tocdepth}{9}
+\renewcommand\contentsname{}
+\tableofcontents
+
+
+\bigskip
+
+%INTRODUCTION
+
+\clearpage\clearpage\setcounter{page}{1}\pagestyle{Convertii}
+\section[Introduction]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+Introduction}
+{\selectlanguage{english}\color{black}
+}
+
+
+\subsection[PURPOSE]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+PURPOSE}
+{\selectlanguage{english}\itshape\color{black}}
+
+
+{\selectlanguage{english}\color{black}
+To outline what will be done to collect data and any other related processes relating to the research conducted for the Boeing Everett Site. This document will be aimed at Boeing faculty, not only for engineers but also managers and any other researchers.}
+
+
+\subsection[SCOPE]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+SCOPE}
+
+{\selectlanguage{english}\color{black}
+The project will produce a functioning algorithm for optimizing salaried worker’s arrival and departure times.
+The algorithm and any other acquired research data will be presented by white paper.
+This product will help Boeing managers and/or resource management find optimal times related to salaried workers.
+Benefits, objectives, goals:	
+Benefits: Increase productive company time while on site, decrease surges of traffic before and after work hours around the site which will relieve traffic congestion for anyone on the road. The goal of this project is to create an algorithm that enables these benefits when applied, create a presentable research document that Boeing’s management can use to improve work flow
+}
+
+
+\subsection[DEFINITIONS, ACRONYMS, AND
+ABBREVIATIONS]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+DEFINITIONS, ACRONYMS, AND ABBREVIATIONS}
+
+
+
+\begin{flushleft}
+\tablehead{}
+\begin{supertabular}{|m{1.3587599in}|m{5.00806in}|}
+\hline
+\centering \selectlanguage{english}\bfseries\color{black} Term or
+Acronym &
+\centering\arraybslash \selectlanguage{english}\bfseries\color{black}
+Definition\\\hline
+\selectlanguage{english}\color{black}Resource Management &
+\selectlanguage{english}\color{black} Process of using and managing an operation’s use of labor, equipment and other resources. In our research we focus mainly on the use of time.
+\\\hline
+
+\end{supertabular}
+\end{flushleft}
+\subsection[REFERENCES]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+REFERENCES}
+{\selectlanguage{english}\itshape\color{black}
+
+{\selectlanguage{english}\color{black}
+None at the moment.}
+
+
+\subsection[OVERVIEW]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+OVERVIEW AND RESTRICTIONS}
+{\selectlanguage{english}\color{black}
+The rest of this document will be used to discuss a few sections in detail. }
+
+
+2.1 describes the prokect's perspective compared to other related projects.
+
+2.2 goes over the project's functionality and some factors that come into play.
+
+2.3 goes over how the user will interact with the product.
+
+2.4 describes product constraints.
+
+2.5 lists the assumptions and dependencies.
+
+
+
+\clearpage\section[OVERALL
+DESCRIPTION]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+OVERALL DESCRIPTION}
+{\selectlanguage{english}\color{black}
+
+
+\subsection[PRODUCT
+PERSPECTIVE]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+PRODUCT PERSPECTIVE}
+
+
+{\selectlanguage{english}\color{black}
+Our research is the first attempt of its kind at Boeing and is experimental and mostly independent, however optimization research like we are doing is not new, many businesses have probably performed research like this before, but in our instance we are going to be the first to perform it on the Everett facility.
+
+
+\subsection[PRODUCT
+FUNCTIONS]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+PRODUCT FUNCTIONS}
+
+
+{\selectlanguage{english}\color{black}
+The intention of this algorithm is to sort and arrange the start and stop times of the salaried employees at Boeing based on location, mode of commuting, and the programs that they are participating in. Using these factors, our algorithm should be able to output the most efficient times for a specified employee.
+
+
+\subsection[USER
+CHARACTERISTICS]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+USER CHARACTERISTICS}
+
+
+
+{\selectlanguage{english}\color{black}
+Since what our team is currently designing is an algorithm rather than software, this cannot be determined at the moment in terms of maintainability, security, and portability.
+The expected users of the product are going to be management level employees at Boeing and any researchers interested in the results, no specific level of education is expected of the user.
+
+
+\subsection[CONSTRAINTS]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+CONSTRAINTS}
+
+
+{\selectlanguage{english}\color{black}
+No software or hardware constraints.
+
+
+\subsection[ASSUMPTIONS AND
+DEPENDENCIES]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+ASSUMPTIONS AND DEPENDENCIES}
+
+
+{\selectlanguage{english}\color{black}
+Our data will have to assume that works are on normal work schedules and any holiday schedules or breaks will not be counted.
+
+%SYSTEM LEVEL REQUIREMENTS start
+%end of SYSTEM LEVEL REQUIREMENTS
+
+\clearpage\section[SPECIFIC
+REQUIREMENTS]{\selectlanguage{english}\rmfamily\bfseries\color{black}
+SPECIFIC REQUIREMENTS}
+{\selectlanguage{english}\color{black}
+Most of the sections in here are for software requirements and do not apply to a research based project. We will withhold from filling this section out until we know what format is required of us.
+}
+
+%EXTERNAL INTERFACE starT
+
+%EXTERNAL INTERFACE END
+
+
+\bigskip
+
+
+
+
+\bigskip
+
+
+\bigskip
+
+\clearpage\setcounter{page}{1}\pagestyle{Convertiv}
+
+
+\bigskip
+
+%EXTERNAL REQUIREMENTS PAGE START
+
+%END OF EXTERNAL REQS. PAGE
+
+
+%USE CASE DIAGRAM START
+
+%usecase diagram end
+
+%REQUIREMENTS TRACEABILITY START
+
+%END traceability requirements
+
+\clearpage\setcounter{page}{1}\pagestyle{Convertvii}
+\section[APPENDIX A.{}]
+{\selectlanguage{english}\rmfamily\bfseries\color{black}
+APPENDIX A.}
+
+
+
+{\selectlanguage{english}\color{black}
+\foreignlanguage{english}{\ }\foreignlanguage{english}{Nothing received yet.}}
+
+
+
+
+
+\bigskip
+\end{document}
+
+
+
+
+
+
