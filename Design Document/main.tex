@@ -1,0 +1,257 @@
+\documentclass[onecolumn, draftclsnofoot,10pt, compsoc]{IEEEtran}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{setspace}
+
+\usepackage{geometry}
+\geometry{textheight=9.5in, textwidth=7in}
+
+% 1. Fill in these details
+\def \CapstoneTeamName{		The Boeing Research Project Team}
+\def \CapstoneTeamNumber{		45}
+\def \GroupMemberOne{			Michael Chan}
+\def \GroupMemberTwo{			Brandon To}
+\def \GroupMemberThree{			Mike Truong}
+\def \CapstoneProjectName{		Boeing Optimization Field Study Design}
+\def \CapstoneSponsorCompany{	Boeing}
+\def \CapstoneSponsorPerson{		Marissa Dennis}
+
+% 2. Uncomment the appropriate line below so that the document type works
+\def \DocType{		%Problem Statement
+				%Requirements Document
+				%Technology Review
+				Design Document
+				%Progress Report
+				}
+			
+\newcommand{\NameSigPair}[1]{\par
+\makebox[2.75in][r]{#1} \hfil 	\makebox[3.25in]{\makebox[2.25in]{\hrulefill} \hfill		\makebox[.75in]{\hrulefill}}
+\par\vspace{-12pt} \textit{\tiny\noindent
+\makebox[2.75in]{} \hfil		\makebox[3.25in]{\makebox[2.25in][r]{Signature} \hfill	\makebox[.75in][r]{Date}}}}
+% 3. If the document is not to be signed, uncomment the RENEWcommand below
+%\renewcommand{\NameSigPair}[1]{#1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{titlepage}
+    \pagenumbering{gobble}
+    \begin{singlespace}
+    	\includegraphics[height=4cm]{Boeing-Logo.png}
+        \hfill 
+        % 4. If you have a logo, use this includegraphics command to put it on the coversheet.
+        %\includegraphics[height=4cm]{CompanyLogo}   
+        \par\vspace{.2in}
+        \centering
+        \scshape{
+            \huge CS Capstone \DocType \par
+            {\large\today}\par
+            \vspace{.5in}
+            \textbf{\Huge\CapstoneProjectName}\par
+            \vfill
+            {\large Prepared for}\par
+            \Huge \CapstoneSponsorCompany\par
+            \vspace{5pt}
+            {\Large\NameSigPair{\CapstoneSponsorPerson}\par}
+            {\large Prepared by }\par
+            Group\CapstoneTeamNumber\par
+            % 5. comment out the line below this one if you do not wish to name your team
+            \CapstoneTeamName\par 
+            \vspace{5pt}
+            {\Large
+                \NameSigPair{\GroupMemberOne}\par
+                \NameSigPair{\GroupMemberTwo}\par
+                \NameSigPair{\GroupMemberThree}\par
+            }
+            \vspace{20pt}
+        }
+        \begin{abstract}
+        % 6. Fill in your abstract    
+        A focused workforce is able to accomplish multiple tasks within the time allocated. The direction of this project is to define a plan that determines the most efficient way for salaried Boeing employees to get to work on time to minimize the disruption to both their production and personal lives. This project will be experimental using the technique of a case study to examine Boeing employees over a time duration of two work days. 
+        Our plan is to use data collection techniques and analytics to develop an algorithm that can be used as demands change. 
+        The data collection involves evaluating instances that can be improved within employee work schedules with the use of surveys, questionnaires, observation, and records. 
+        Combining faculty documents with the data obtained from the employees of Boeing Everett the findings will determine a method to improve efficiency. At length the results will boost productivity for Boeing Everett. 
+        \end{abstract}     
+    \end{singlespace}
+\end{titlepage}
+\newpage
+\pagenumbering{arabic}
+\tableofcontents
+% 7. uncomment this (if applicable). Consider adding a page break.
+%\listoffigures
+%\listoftables
+\clearpage
+
+% 8. now you write!
+% 1---------------------------------------------------------------------------------------------------------------
+\section{Pitch}
+\indent \indent Develop a model to manage an algorithm that can be used to determine the optimal time for salaried employees to start and stop their shift at the Boeing Everett Factory. 
+
+% 2---------------------------------------------------------------------------------------------------------------
+\section{Definitions}
+\textbf{Stakeholders:} The focus is mainly on project managers and salaried employees. 
+Project managers determine when it is the most effective time for employees to be required on site. 
+This makes them the best candidate to use/manage the algorithm. 
+Salaried employees are the other focus as they are the ones who must determine if the conditions allow them to travel safely and if the suggestion works with their time. \\
+\textbf{Problems with shift start, stop, and commute:} Disruptions to these factors involve heavy traffic congestion within highways, entrances/exits, and inadequate parking. 
+
+% 3---------------------------------------------------------------------------------------------------------------
+\section{Types of Data}
+\textbf{Spatial:} We will be analyzing the blueprints of buildings, parking lots, and maps within the site in order to factor in the location of certain buildings and the entrances/exits of the facility. 
+This data will allow us to better understand the relationship between project groups and parking constraints on the site. \\
+\textbf{Temporal:} This involves mostly quantitative data such as the number of salaried employees on site at a given time, travel times while commuting to work, and shift start/stop times. 
+While given a better visualization of the situation of the employees commuting to work, this also helps us evaluate constraints such as production capacity. 
+\par\null\par
+
+\noindent Data that Boeing should provide us will include facility maps, employee schedules, general employee information such as their zip codes, projects they are currently assigned to, group members in those projects, method of transportation, allocating time for a few salaried employees to interview, and if possible, access to a database to see entrance/exit gate usage. 
+Information that we will have to acquire on our own will be traffic analytics (traffic congestion at specific hours) from Google,Washington State Department of Transportation(WSDOT). 
+Data we will most likely be acquiring during the field study will be how congested the gates are at peak hours and employee opinions on travel (to measure how bad they perceive the travel situation to be).
+
+% 4---------------------------------------------------------------------------------------------------------------
+\section{Variables}
+\indent \indent Each subject will have a multitude of variables that are associated with them where we will want to record and monitor. 
+The main subjects of interest are salaried employees. 
+Quantitative variables of interest are starting and leaving times for work and preferred or usual times for starting and leaving. 
+A few qualitative variables are methods of transport, preferred entrances and exits, paths to be taken, zip codes, and methods of transport.
+
+
+Non salaried workers are mainly those on wages who do not get to determine their starting or stop times, which will remain static. Salaried workers will want to avoid encounters during the times that wage workers are hitting the entrances/exits. It will be simple to see when they get to work because Boeing already will be keeping track of their shift times and when they enter the factory. Any proposed solution should simply avoid the peak times before the wage workers arrive and avoid times after the wage workers leave.
+
+
+\textbf{Roads} are going to be the primary routes used to get employees to their destination. 
+As there are many related tools available in measuring traffic analytics, Google Maps/Analytics being one example, they can be utilized to help monitor and record traffic flow. 
+Each road will have a set distance but other changing factors such as how congested it is and estimated travel time will need to be recorded as well. 
+Each employee will have varying distances and each trip will most likely have a different estimated travel time depending on the time of day and how busy the roads are. 
+Travel times are dependent on distance and traffic flow at the time of travel.
+
+
+As mentioned by our client, there are around 4 or so main \textbf{entrances} workers take to enter and exit. 
+With 30,000 employees, can be difficult to get in and out during the start and end of a work day. 
+Variables that need to be monitored include how long it takes to get through these entrances, and what times the salaried employees usually access these gates. 
+Looking at these factors it is possible to generate optimal times to arrive and leave.
+
+
+The \textbf{preferred shift times and project groups} play a large factor in the interest of the employees as it directly correlates with the current state of production. 
+Though salaried workers have more freedom to choose when to start their shifts, they must balance this with other individuals within the same group as it involves meeting up for important decision making and interacting for an optimal solution. 
+The production cycle could be halted unexpectedly if the proper resources are not available to them during their shift.
+Since these projects function in a hierarchical system, it is crucial that approvals and progress are recorded by the correct project managers on site.  
+
+% 5---------------------------------------------------------------------------------------------------------------
+\section{Sampling}
+    \subsection{Population}
+    \indent \indent The population of interest are the salaried employees of the Boeing Everett Factory. 
+    The sampling frame derived from the population will be the small group of salaried employees we will be interviewing and surveying. 
+    Using the data drawn from this sample, we will be able to infer and generalize the data from the smaller group upon the population. 
+    According to our client will most likely be able to survey at least 20 or more people. 
+    The sampling frame will preferably be a group of randomly selected salaried individuals that work on the Boeing site. 
+    Random sampling should be done to eliminate bias and increase the study’s validity. 
+
+    \subsection{Reliability and Validity}
+    \indent \indent External validity is how well the conclusions from a study hold for other situations [1]. 
+    Drawing a fair representative sample from a population and conducting research with that sample are a few of the main methods of generalization, often known as the Sampling Model. 
+    We will most likely be using something similar to the Proximal Similarity Model, which puts in context how similar or dissimilar a selected sample could be compared to the real population. 
+    It will be better at generalizing for persons more similar to the results found, and less for those that are not.
+    This modeling is called gradient of similarity [1]. 
+    For example, if we had a sample that only included aerospace engineers, it would only would be representative of other engineers on the Everett site rather than other kinds of salaried workers like managers.
+    
+    Internal validity is mostly appropriate for cause-effect relationships [1], and is not relevant in observational studies like what we will be performing. 
+    It may be useful for reviewing if our white paper recommendation has any useful effect, but that is outside the scope of our research at the moment.  
+
+% 6---------------------------------------------------------------------------------------------------------------
+\section{Type of Study}
+\indent \indent Our team will be conducting a cross-sectional research field study which is a method that is generally used to collect data about users. 
+A field study is appropriate to our goal because the user opinion is the important data we need that cannot be obtained otherwise. 
+Our client has communicated to us that they would also like for us to converse with some of the salaried employees to gain more specific data. 
+Field studies are done in natural settings and environments, taking notes as we observe the user's work [2]. 
+Observation can stretch from being direct and indirect. 
+The factors of being direct can affect the user's action and also skew the data from the field study. 
+With an indirect study, the user may decide to go off tangent from what the normal expectation would be of them [2]. 
+
+
+Establishing a field study can be broken down into three planning stages. 
+First of the three stages would be to establish objectives and information requirements. 
+For this case study, the objectives would be to achieve the basic understanding of how employees at Everett get to work and their constraints. 
+Second would be contacting those individuals who are participating within the field study, the individuals that would carry out the observation. 
+In this case, it would be our client and Boeing employees. We need to establish the times and places. 
+We believe this responsibility lies with our client as they will be scheduling the individuals and establishing a time and place where we can meet the employees to conduct such test. 
+The last of the planning stage is to decide the recording technique that we will use. 
+We will be using hand-written notes for the observation and also laptops/tablets, we are using these recording techniques because it allows us to easily document our observation and also share them among teammates. 
+
+
+Another study that is similar and supports field study is case-control study. 
+A case-control study that examines multiple exposures in relation to an outcome. 
+One of the two case-control variables will consist of an individual from Boeing who does not face an issue relating to vehicle transportation or traffic. 
+The other case-control we will look at is in regards to Boeing employee who faces issues with transportation, traffic, or any other discomfort traveling to work. 
+The advantage to this study method is that it allows us to have two sets of data offering opposing views, allowing us to understand both sets of opinions. 
+
+% 7---------------------------------------------------------------------------------------------------------------
+\section{Proposed Analysis}
+\indent \indent The main issue of prolonged waiting times at the Boeing Everett Factory takes place at the entrances of the facility. 
+Due to this, our team must evaluate the average traffic density that passes through during the busy work hours. 
+Since our time is limited on the premise, we plan to interview a few of the gate attendants of the parking structures to obtain an average amount of cars that pass through between 9AM to 5PM. 
+We are looking for these specific traffic congestion indicators:  Roadway Level of Service(LOS), Commute Duration, and Congestion Duration [3]. 
+These are congestion indicators used by transport institutions to study roadway congestion. 
+LOS is ranked on a scale from good to significantly congested. Commute Duration is just the average time spent per commute trip, and Congestion Duration is the average duration of congested durations. 
+By monitoring these conditions at the main gates we can
+
+
+% 8---------------------------------------------------------------------------------------------------------------
+\section{Survey Instruments}
+\indent \indent Surveys allow us to capture applied statistics by sampling individuals from a population. 
+Our intended audience for these surveys are the employees at Boeing Everett who are under salary. 
+Our plan is to use Qualtrics, an online website that allows us to generate surveys. 
+The target answers we are looking for from these surveys are related to time, comfort, and work constraints. 
+
+
+The plan is to narrow the survey to 8-10 questions. 
+These questions will than be evaluated for their response. 
+We chose this number because we did not want the employees to be overwhelmed by too many questions which might potentially alter the data. 
+Questions should be answered by a random selection of Boeing Everett salaried employees to eliminate errors. 
+While analyzing these surveys as a team, we must remember that the responder of the survey may not always be accurate.
+Responses may be a result of the reader’s interest or the question could be framed in a way that is misinterpreted by employees. 
+Surveys will include a variety of categorical questions including yes/no, multiple choice, and open-ended survey questions. 
+For sensitive questions, they could be asked in terms of a hypothetical projection to obtain a honest/reasonable estimate.
+
+
+Our client also said we may be required to interview a few employees to obtain relevant information on top of the survey. 
+Interviews are a more personal form of acquiring information from a sample. 
+If done correctly, it can be more rewarding than a survey. 
+General tasks for us as interviewers include motivating good responses, being professional and clarifying concerns, and avoid creating confusion. 
+To obtain adequate responses, it may sometimes be necessary to probe for more details. 
+Various probing techniques include encouragement, asking for elaboration/clarification, and repetition. 
+Due to the sensitive nature of interviewing and surveying we may omit some of this data from our research/solution.
+\par\null\par
+\noindent These are three of the sample of the questions that may be found within our survey:
+
+1) What is your primary method of commuting to the Boeing Everett Factory?
+
+2) What difficulties do you face when traveling to and leaving your destination at work? 
+Briefly answer with \indent approximately 1-2 sentences. 
+
+3) On an average day, how much time do you spend commuting from work and home?
+
+% 9---------------------------------------------------------------------------------------------------------------
+\section{Constraints}
+\indent \indent The constraints of this project relates to the limitations of conducting a thorough research inquiry. 
+As a team, we plan to be on site at Boeing Everett for two days in Everett, Washington. 
+Within two days, we will need to conduct a field study using survey instruments and our observational skills. 
+The fixed time we have at Boeing can be viewed as a constraint when it comes to acquiring data. We aim to gather as much data as possible including personal opinion, traffic conditions, and transportation variables. 
+With the time constraints, we will need to create a plan to help focus on more important data that needs to be collected.
+
+
+Currently we are facing a resource constraint for the project relating to workable data. 
+We have not received information from Boeing related to private data and documentation. 
+Our data is currently obtained from public sources and from scholarly documents from sources who have dealt with similar issues to what we are attempting to solve at Boeing. 
+We are also obtaining information from the Washington State Department of Transportation (WSDOT) in regards to traffic information. 
+We believe data we find here could lower our constraints of having quantitative data relating to transportation issue. 
+
+\clearpage\
+\section{References}
+
+[1]"External Validity", Socialresearchmethods.net, 2016. [Online]. Available:\\ http://www.socialresearchmethods.net/kb/external.php. [Accessed: 01- Dec- 2016].
+\par\null\par
+\noindent [2]T. Litman, Smart Congestion Relief, 1st ed. Victoria: Victoria Transport Policy Institute, 2016, p. 12.
+\par\null\par
+\noindent [3]"Field Study | Usability Body of Knowledge", Usabilitybook.org, 2016. [Online]. Available: \\ http://www.usabilitybok.org/field-study. [Accessed: 02- Dec- 2016].
+
+
+\end{document}
