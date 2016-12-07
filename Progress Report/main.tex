@@ -1,0 +1,142 @@
+\documentclass[onecolumn, draftclsnofoot,10pt, compsoc]{IEEEtran}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{setspace}
+
+\usepackage{geometry}
+\geometry{textheight=9.5in, textwidth=7in}
+
+% 1. Fill in these details
+\def \CapstoneTeamName{		The Boeing Research Project Team}
+\def \CapstoneTeamNumber{		45}
+\def \GroupMemberOne{			Michael Chan}
+\def \GroupMemberTwo{			Brandon To}
+\def \GroupMemberThree{			Mike Truong}
+\def \CapstoneProjectName{		Boeing Optimization Progress Report}
+\def \CapstoneSponsorCompany{	Boeing}
+\def \CapstoneSponsorPerson{		Marissa Dennis}
+
+% 2. Uncomment the appropriate line below so that the document type works
+\def \DocType{		%Problem Statement
+				%Requirements Document
+				%Technology Review
+				%Design Document
+				Progress Report
+				}
+			
+\newcommand{\NameSigPair}[1]{\par
+\makebox[2.75in][r]{#1} \hfil 	\makebox[3.25in]{\makebox[2.25in]{\hrulefill} \hfill		\makebox[.75in]{\hrulefill}}
+\par\vspace{-12pt} \textit{\tiny\noindent
+\makebox[2.75in]{} \hfil		\makebox[3.25in]{\makebox[2.25in][r]{Signature} \hfill	\makebox[.75in][r]{Date}}}}
+% 3. If the document is not to be signed, uncomment the RENEWcommand below
+%\renewcommand{\NameSigPair}[1]{#1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\begin{titlepage}
+    \pagenumbering{gobble}
+    \begin{singlespace}
+    	\includegraphics[height=4cm]{Boeing-Logo.png}
+        \hfill 
+        % 4. If you have a logo, use this includegraphics command to put it on the coversheet.
+        %\includegraphics[height=4cm]{CompanyLogo}   
+        \par\vspace{.2in}
+        \centering
+        \scshape{
+            \huge CS Capstone \DocType \par
+            {\large\today}\par
+            \vspace{.5in}
+            \textbf{\Huge\CapstoneProjectName}\par
+            \vfill
+            {\large Prepared for}\par
+            \Huge \CapstoneSponsorCompany\par
+            \vspace{5pt}
+            {\Large\NameSigPair{\CapstoneSponsorPerson}\par}
+            {\large Prepared by }\par
+            Group\CapstoneTeamNumber\par
+            % 5. comment out the line below this one if you do not wish to name your team
+            \CapstoneTeamName\par 
+            \vspace{5pt}
+            {\Large
+                \NameSigPair{\GroupMemberOne}\par
+                \NameSigPair{\GroupMemberTwo}\par
+                \NameSigPair{\GroupMemberThree}\par
+            }
+            \vspace{20pt}
+        }
+        \begin{abstract}
+        % 6. Fill in your abstract    
+        A focused workforce is able to accomplish multiple tasks within the time allocated. The direction of this project is to define a plan that determines the most efficient way for salaried Boeing employees to get to work on time to minimize the disruption to both their production and personal lives. This project will be experimental using the technique of a case study to examine Boeing employees over a time duration of two work days. 
+        Our plan is to use data collection techniques and analytics to develop an algorithm that can be used as demands change. 
+        The data collection involves evaluating instances that can be improved within employee work schedules with the use of surveys, questionnaires, observation, and records. 
+        Combining faculty documents with the data obtained from the employees of Boeing Everett the findings will determine a method to improve efficiency. At length the results will boost productivity for Boeing Everett. 
+        \end{abstract}     
+    \end{singlespace}
+\end{titlepage}
+\newpage
+\pagenumbering{arabic}
+\tableofcontents
+% 7. uncomment this (if applicable). Consider adding a page break.
+%\listoffigures
+%\listoftables
+\clearpage
+
+% 8. now you write!
+% 1---------------------------------------------------------------------------------------------------------------
+\section{Purpose and Goals}
+\indent \indent The Boeing Everett Factory struggles with inefficient arrivals and departure times, causing a direct correlation to the employee’s ability to balance production efficiency and time spent with their families. 
+With a large population of approximately 30,000 employees, it is common to have many instances of dense amounts of workers who would attempt to arrive/depart from the Everett Facility at the same time, bringing about unnecessary traffic congestion. 
+Boeing has identified the main cause of this being from unorganized shift times of their salaried employees.
+It is imperative that large factories like Boeing remain efficient to not only ensure that the optimal amount of progress is made at the work environment but also, ensuring that their employees are content and commute safely to their homes.
+  
+Our client has noted that there is no designated budget at this time in consideration for maintaining an application.
+In result, the purpose of this project is to research and design an algorithm to increase optimize the shift start and stop times of the salaried employees and management team. 
+The qualities that we are working to accomplish in our algorithm are efficiency, sustainability, and versatility. 
+To maintain efficiency in all areas of Boeing's production, our algorithm must ensure that changing the start and stop times of shifts will not hinder the productivity of employees. Sustainability of this algorithm is crucial to ensure that this is a long term solution rather than creating issues else where within the production. 
+Lastly, versatility of the algorithm is key as we must consider the possibility of new objectives that the company may want to accomplish.
+
+% 2---------------------------------------------------------------------------------------------------------------
+\section{Current Progress}
+
+Our current status of the research project stands at a halt as we are waiting on our non-disclosure agreement from Boeing. As a result, we have not received any documentation from Boeing at this time. However, we have completed a documentation within the class that have helped shaped the goals of our research project. We have completed the Problem Statement document which provides an in depth description of the issues we will alleviate from our clients. At the time of writing the Problem Statement, we had our first meeting with our client. As a whole, we have addressed Boeing’s problems, proposed a solution, and organized a general estimate of when we would be on site in Everett, Washington to conduct research for the project. We have also provided a Requirements Document, outlining what our clients expect us to design for them. This document is a mutual understanding that as contractors, we will aim to resolve their task within their standards. 
+
+
+A Technology Review has also been drafted which compares the tools we would use for our research. Some of these tools include: data capture methods, data analyzing methods, presentation methods, testing, design goals and implementation. We then analyze the tradeoffs of the document in search of the best tools to solve the issue proposed by our clients. Our last completed document was the Design Document, where we described how we would gather the necessary data needed for our selected methods. We concluded that we would conduct a field study as we founded it to be the most beneficial for this research project. We have also been communicating with Kirsten Winters, one of our instructors for the class whom has helped us greatly in narrowing our goals for the project. 
+
+
+We now await documentation from our client and also dates for transportation from Corvallis, Oregon to the Boeing Everett site which is located in Washington. At this current time we will be going through our old documents and making improvements. 
+
+% 3---------------------------------------------------------------------------------------------------------------
+\section{Problems}
+We have yet to see any actual documents from Boeing aside from what we have found online, such as Everett’s maps. The process of acquiring an NDA from Boeing’s upper management is proving to be a long process but once we have signed it we should be able to make progress. We also believe that after signing the NDA we will be able to visit the facility come winter term.
+
+
+We have also faced structure issues when it comes to documentation;  our project is research based which has significant differences when it came to the original structure we were given. This issue became more obvious as our goals and methodology did not match the criteria of many documents. The solution came from communicating the issue to Kirsten Winters. 
+
+
+\begin{table}[]
+\centering
+\caption{Fall Term Retrospective}
+\label{my-label}
+\begin{tabular}{|l|p{0.3\linewidth}|p{0.3\linewidth}|p{0.3\linewidth}|p{0.3\linewidth}}
+\cline{1-4}
+Week & Positives                                                                                                                                                             & Deltas                                                                                                                            & Actions                                                                                                                                         &  \\ \cline{1-4}
+3    & Met with Marissa and Michael, we talked over specifics and plans such as transportation, time frame of our visit, and the purpose of their proposal.                  &                                                                                                                                   &                                                                                                                                                 &  \\ \cline{1-4}
+4    & Met up with Jon and got a lot of good feedback for our Problem Statement.                                                                                             &                                                                                                                                   &                                                                                                                                                 &  \\ \cline{1-4}
+5    & Wrote the Requirements Document’s rough draft and talked with Kirsten about deadlines for signing. She understood our situation and approved us for a few extensions. &                                                                                                                                   &                                                                                                                                                 &  \\ \cline{1-4}
+6    & Completed the Requirements Document.                                                                                                                                  &                                                                                                                                   &                                                                                                                                                 &  \\ \cline{1-4}
+7    & Altered documentation format from a more software oriented to a research. Allowing the goals to be more clear.                                                        & Need faster responses from our client.                                                                                            & Speak to Kevin or Kirsten about our situation and see what their response is.                                                                   &  \\ \cline{1-4}
+8    & Completed the Technology Review to the best of our ability with what we had.                                                                                          & Our papers were not receiving good feedback.                                                                                      & Speak with Kirsten and Jon to see what they are expecting out of our documents. Our project does not work with the format they are looking for. &  \\ \cline{1-4}
+9    & Got a response from Marissa and arranged communication methods that did not require email                                                                             & One of the research tools we looked into were surveys, Jon wanted us to check if we needed documents relating to IRB from Boeing. & Surveys are an optional tool for now, if we choose so we will contact Boeing. Kirsten has mention her opinion to avoid the IRB.                 &  \\ \cline{1-4}
+10   & Spoke with Kirsten about Design Document layout and what methods we should use to acquire the data we needed while at the Boeing facility.                            & Revise and resubmit the Technology Review and Requirements Document.                                                              & Fix grammatical and spelling errors and any related errors as noted by Kirsten.                                                                 &  \\ \cline{1-4}
+\end{tabular}
+\end{table}
+
+
+
+%[1]"External Validity", Socialresearchmethods.net, 2016. [Online]. Available:\\ %http://www.socialresearchmethods.net/kb/external.php. [Accessed: 01- Dec- 2016].
+%\par\null\par
+%\noindent 
+
+
+\end{document}
